@@ -3,7 +3,36 @@
 
 {<html_body}
 
-Welcome to User Page
+  <div>
 
+    <h2>This is the Users Page</h2>
 
+    <p class="col-xs-1 pull-right">Page {page} of 2</p>
+
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+      </tr>
+      </thead>
+      <tbody>
+
+        {#users}
+          {> "userRow" /}
+        {/users}
+
+      </tbody>
+    </table>
+
+    <nav>
+      <ul class="pager">
+        <li><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
+      </ul>
+    </nav>
+
+  </div>
 {/html_body}

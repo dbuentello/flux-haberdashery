@@ -1,0 +1,6 @@
+<tr>
+  <th scope="row">{id}</th>
+  <td>{firstName}</td>
+  <td>{lastName}</td>
+  <td>{email}</td>
+</tr>
