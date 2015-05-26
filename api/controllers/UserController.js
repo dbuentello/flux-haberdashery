@@ -89,7 +89,7 @@ module.exports = {
     if (req.wantsJSON) {
       return res.jsonx(scope);
     }
-    
+
     res.view('userPage', scope);
   }
 

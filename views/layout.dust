@@ -50,8 +50,26 @@
 <script src="https://cdn.jsdelivr.net/dustjs.helpers/1.5.0/dust-helpers.min.js"></script>
 
 <!-- Dust Templates -->
-{!<script src="/templates/compiled_templates.js"></script>!}
+<script src="/templates/compiled_templates.js"></script>
 
+<script>
+
+  function page2() {
+    $.get( "/?page=2", function( data ) {
+      var users = data.users;
+
+      $( "#userRows" ).html('');
+      users.forEach(function(curr) {
+        dust.render('userRow', curr, function(err, out) {
+          $( "#userRows" ).append( out );
+        });
+      });
+
+    });
+  }
+
+
+</script>
 <!--SCRIPTS-->
 <!--SCRIPTS END-->
 
